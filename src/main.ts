@@ -86,6 +86,8 @@ import {
   ElMessageBox,
   ElNotification
 } from 'element-plus'
+import router from './router'
+import store from './store'
 
 const components = [
   ElAlert,
@@ -180,4 +182,5 @@ plugins.forEach((plugin) => {
   app.use(plugin)
 })
 
+app.use(router).use(store)
 app.mount('#app')
